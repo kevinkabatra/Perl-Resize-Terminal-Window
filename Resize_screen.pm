@@ -7,9 +7,14 @@ use vars qw(@ISA @EXPORT_OK); #backward compatibility Perls under 5.6
 use Exporter;
 our @ISA = "Exporter";
 our @EXPORT_OK = qw(resize_screen);
-
+  
 #/**
-# * #expand terminal window. confirmed in GNOME Terminal 3.8.4
+# * Resizes terminal window using ANSI escape codes.
+# * Confirmed in GNOME Terminal 3.8.4
+# * 
+# * Example code:
+# *     resize_screen(31, 130);
+# * 
 # * parameters: width
 # * 		height
 # * returns: void
